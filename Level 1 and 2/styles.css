@@ -1,0 +1,136 @@
+
+body{
+    background-color: aquamarine;
+    padding: 40px;
+    animation-name: juega;
+    animation-iteration-count: reverse;
+    
+    animation-duration:5s;
+}
+
+.play{
+    height: 120px;
+    display: flex;
+}
+
+
+.main{
+    background-color: bisque;
+    height: auto;
+    display: flex;
+    border-style:outset;
+    border-color: peachpuff;
+    border-radius: 20px;
+    padding-bottom: 100px;
+
+  
+}
+
+.texto {
+    height: 100px;
+    display: flex;
+    background-color: honeydew;
+}
+
+#acudit{
+    color: black;
+    position: relative;
+}
+
+
+h4{
+    color: white;
+    animation-name: letras;
+    animation-duration: 3s;
+    position: relative;
+    animation-iteration-count: initial;
+}
+
+.nosmile {
+    display: none;
+}
+
+
+#smile{
+    font-size: 50px;
+    animation-name: risa;
+    animation-duration: .4s;
+    animation-iteration-count:infinite;
+    position:relative;
+    visibility: visible;
+}
+
+
+#botonacudit{
+    border-radius: 15px;
+    border-style: outset;
+    border-color:white;
+    position: absolute;
+    color: white;
+    margin-top: 25px;
+}
+
+
+/*ANIMACIONES*/
+
+@keyframes letras{
+    0% {font-size: 10px; left: 10px; top: 5px;}
+    100% {font-size: 100px; left: 40px; top: 10px;}
+}
+
+@keyframes juega{
+    1%{background-color:orange;}
+    100%{background-color:aquamarine;}
+}
+
+@keyframes risa {
+    0% {top: 0px;}
+    25% {top: -5px;}
+    50% {top: 0px;}
+    75% {top: -5px;}
+    100% {top: 0px;}
+}
+
+
+
+/*MEDIA RESPONSIVE*/
+
+@media (max-width: 390px){
+    #acudit{
+        font-size: 8px;
+    }
+   
+    #smile {
+       font-size: 20px;
+    }
+    #botonacudit{
+        font-size: 8px;
+    }
+
+}
+
+@media (max-width: 767px){
+    #acudit{
+        font-size: 12px;
+    }
+    
+    #smile {
+        font-size: 30px;
+     }
+     #botonacudit{
+         font-size: 11px;
+     }
+}
+
+@media (min-width: 768px){
+    #acudit{
+        font-size: 25px;
+    }
+   
+    #smile {
+        font-size: 40px;
+     }
+     #botonacudit{
+         font-size: 20px;
+     }
+}
