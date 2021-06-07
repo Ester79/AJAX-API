@@ -2,12 +2,14 @@
 
 var contadorcaras = 0;
 
+const appJoke = "http://api.icndb.com/jokes/random";
+
 
 //Cargar documento
 $(document).ready(function () {
 
 
-    $.getJSON("http://api.icndb.com/jokes/random", function (dato, status, xhr) { //nombre del documento de donde viene la información
+    $.getJSON(appJoke, function (dato, status, xhr) { //nombre del documento de donde viene la información
         console.log(dato.value.joke);
 
         $("#acudit").html(dato.value.joke);
@@ -16,7 +18,7 @@ $(document).ready(function () {
     //Función al hacer click en el botón
     $("#botonacudit").click(function () {
 
-        fetch("http://api.icndb.com/jokes/random")
+        fetch(appJoke)
             .then(response => response.json())
             .then(function (dato, status, xhr){
                 $("#acudit").html(dato.value.joke);
@@ -41,7 +43,6 @@ $(document).ready(function () {
                     $("#smile").html(icono + "&#128514;");
                 } else {
                     $("#smile").html("&#128578;");
-                    /*$("#smile").html("&#128512;"); */
                 }
                 contadorcaras = contadorcaras + 1;
             });
